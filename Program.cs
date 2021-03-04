@@ -8,7 +8,7 @@ namespace Developers_Bank
 {
     class Program
     {
-        public string serviceNo;
+        public static string serviceNo;
         public string open;
         public string account;
         public string name;
@@ -17,9 +17,15 @@ namespace Developers_Bank
         public double balance;
         static void Main(string[] args)
         {
+            Program program = new Program();
             while(true)
             {
-
+                program.LaunchApp();
+                if(serviceNo == "quit" )
+                {
+                    return;
+                }
+                program.LaunchService();
             }
         }
 
@@ -33,7 +39,7 @@ namespace Developers_Bank
             Console.WriteLine("PRESS 3: TO QUIT");
             Console.WriteLine("-----------------------------");
 
-            this.serviceNo = Console.ReadLine();
+            serviceNo = Console.ReadLine();
         }
 
         public void LaunchService()
@@ -47,9 +53,9 @@ namespace Developers_Bank
                     //string dateofBirth = Console.ReadLine();
                     //Console.WriteLine("Enter your Address : ");
                     //string address = Console.ReadLine();
-                    //Console.WriteLine("Enetr your Starting Balance");
+                    //Console.WriteLine("Enter your Starting Balance : ");
                     //double balance = Convert.ToDouble(Console.ReadLine());
-                    switch(open)
+                    switch (open)
                     {
                         case "savings":
                             break;
