@@ -10,6 +10,14 @@ namespace Developers_Bank
     {
         public void CreateAccount()
         {
+            Console.WriteLine("OPEN A BANK ACCOUNT");
+            Console.WriteLine("------------------------------------");
+            Console.WriteLine("SELECT THE TYPE OF YOUR ACCOUNT");
+            Console.WriteLine("1. Savings Account");
+            Console.WriteLine("2. Checking Account");
+            Console.WriteLine("3. Exit from the application");
+            Console.WriteLine("Please Enter the Type Number : ");
+            int type = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter your name : ");
             string name = Console.ReadLine();
             Console.WriteLine("Enter your Date of birth : ");
@@ -19,14 +27,22 @@ namespace Developers_Bank
             Console.WriteLine("Enter your Starting Balance : ");
             double balance = Convert.ToDouble(Console.ReadLine());
 
-            //if (SavingsAccount)
-            //{
-            //    Account account = new SavingsAccount(name, dateofBirth, address, balance);
-            //}
-            //else
-            //{
-            //    Account account = new CheckingAccount(name, dateofBirth, address, balance);
-            //}
+            if (type == 1)
+            {
+                Account account = new SavingsAccount(name, dateofBirth, address, balance);
+            }
+            else if (type == 2)
+            {
+                Account account = new CheckingAccount(name, dateofBirth, address, balance);
+            }
+            else if (type == 3)
+            {
+                return;
+            }
+            else
+            {
+                Console.WriteLine("YOU HAVE ENTERED AN INVALID TYPE NUMBER.");
+            }
         }
     }
 }

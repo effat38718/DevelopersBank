@@ -30,9 +30,9 @@ namespace Developers_Bank
             Console.WriteLine("WELCOME TO DEVELOPES BANK!!");
             Console.WriteLine("HOW CAN I HELP YOU?");
             Console.WriteLine("-----------------------------");
-            Console.WriteLine("PRESS 1: FOR OPENING A BANK ACCOUNT");
-            Console.WriteLine("PRESS 2: FOR PERFORMING TRANSACTION");
-            Console.WriteLine("PRESS 3: TO QUIT");
+            Console.WriteLine("PRESS 1: OPENING A BANK ACCOUNT");
+            Console.WriteLine("PRESS 2: PERFORM TRANSACTION FOR AN ACCOUNT");
+            Console.WriteLine("PRESS 3: EXIT FROM THE APPLICATION");
             Console.WriteLine("-----------------------------");
 
             serviceNo = Console.ReadLine();

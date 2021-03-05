@@ -8,6 +8,10 @@ namespace Developers_Bank
 {
     class SavingsAccount : Account
     {
+        public SavingsAccount(string name, string dateofBirth, string address, double balance) : base(name, dateofBirth, address, balance)
+        {
+
+        }
         public override void Withdraw()
         {
             Console.WriteLine("Enter the Withdraw amount : ");

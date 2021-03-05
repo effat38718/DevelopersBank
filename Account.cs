@@ -10,8 +10,16 @@ namespace Developers_Bank
     {
         public string name;
         public string dateofBirth;
-        public string Address;
+        public string address;
         public double balance;
+
+        public Account(string name, string dateofBirth, string address, double balance)
+        {
+            this.name = name;
+            this.dateofBirth = dateofBirth;
+            this.address = address;
+            this.balance = balance;
+        }
         public void Deposit()
         {
             Console.WriteLine("Enter the deposit amount : ");
