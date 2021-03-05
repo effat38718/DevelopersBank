@@ -8,10 +8,6 @@ namespace Developers_Bank
 {
     public class Bank
     {
-        public string name;
-        public string dateofBirth;
-        public string Address;
-        public double balance;
         public void CreateAccount()
         {
             Console.WriteLine("Enter your name : ");

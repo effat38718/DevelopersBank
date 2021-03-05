@@ -8,8 +8,15 @@ namespace Developers_Bank
 {
     public abstract class Account
     {
+        public string name;
+        public string dateofBirth;
+        public string Address;
+        public double balance;
         public void Deposit()
         {
+            Console.WriteLine("Enter the deposit amount : ");
+            double amount = Convert.ToDouble(Console.ReadLine());
+            balance = balance + amount;
 
         }
 
@@ -17,7 +24,7 @@ namespace Developers_Bank
 
         public void Transfer()
         {
-
+            
         }
 
         public void ShowInformation()

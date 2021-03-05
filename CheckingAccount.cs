@@ -10,7 +10,17 @@ namespace Developers_Bank
     {
         public override void Withdraw()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Enter the withdraw amount : ");
+            double amount = Convert.ToDouble(Console.ReadLine());
+
+            if(amount <= balance)
+            {
+                balance -= amount;
+            }
+            else
+            {
+                Console.WriteLine("YOU DON'T HAVE SUFFICIENT baLANCE!!");
+            }
         }
     }
 }
