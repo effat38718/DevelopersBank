@@ -11,10 +11,6 @@ namespace Developers_Bank
         public static string serviceNo;
         public string open;
         public string account;
-        public string name;
-        public string dateofBirth;
-        public string Address;
-        public double balance;
         static void Main(string[] args)
         {
             Program program = new Program();
@@ -47,14 +43,6 @@ namespace Developers_Bank
             switch(serviceNo)
             {
                 case "open":
-                    //Console.WriteLine("Enter your name : ");
-                    //string name = Console.ReadLine();
-                    //Console.WriteLine("Enter your Date of birth : ");
-                    //string dateofBirth = Console.ReadLine();
-                    //Console.WriteLine("Enter your Address : ");
-                    //string address = Console.ReadLine();
-                    //Console.WriteLine("Enter your Starting Balance : ");
-                    //double balance = Convert.ToDouble(Console.ReadLine());
                     switch (open)
                     {
                         case "savings":

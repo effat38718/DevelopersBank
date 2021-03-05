@@ -6,14 +6,21 @@ using System.Threading.Tasks;
 
 namespace Developers_Bank
 {
-    public class Account
+    public abstract class Account
     {
-        public void SavingsAccount()
+        public void Deposit()
         {
 
         }
 
-        public void CheckingAccount()
+        public abstract void Withdraw();
+
+        public void Transfer()
+        {
+
+        }
+
+        public void ShowInformation()
         {
 
         }
