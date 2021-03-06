@@ -8,11 +8,11 @@ namespace Developers_Bank
 {
     public abstract class Account
     {
-        public int accountNo;
-        public string name;
-        public string dateofBirth;
-        public double balance;
-        public Address address;
+        private int accountNo;
+        private string name;
+        private string dateofBirth;
+        internal double balance;
+        private Address address;
         internal int transactionCount = 0;
 
         public Account(int accountNo, string name, string dateofBirth, Address address, double balance)
