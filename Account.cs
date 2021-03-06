@@ -11,11 +11,11 @@ namespace Developers_Bank
         public int accountNo;
         public string name;
         public string dateofBirth;
-        public string address;
         public double balance;
+        public Address address;
         internal int transactionCount = 0;
 
-        public Account(int accountNo, string name, string dateofBirth, string address, double balance)
+        public Account(int accountNo, string name, string dateofBirth, Address address, double balance)
         {
             this.accountNo = accountNo;
             this.name = name;
@@ -27,7 +27,7 @@ namespace Developers_Bank
         {
             balance = balance + amount;
             Console.WriteLine("Your depositted amount is  " + amount);
-            Console.WriteLine("Your current balance is" + balance);
+            Console.WriteLine("Your current balance is " + balance);
             transactionCount++;
         }
 

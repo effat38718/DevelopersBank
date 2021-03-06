@@ -24,13 +24,23 @@ namespace Developers_Bank
             Console.WriteLine("Type 'checking' Checking Account");
             Console.WriteLine("Type 'quit' to Exit from the application");
             Console.WriteLine("Please Enter your choice : ");
+            Console.WriteLine("-----------------------------------------------");
             string type = Console.ReadLine();
             Console.WriteLine("Enter your name : ");
             string name = Console.ReadLine();
             Console.WriteLine("Enter your Date of birth : ");
             string dateofBirth = Console.ReadLine();
-            Console.WriteLine("Enter your Address : ");
-            string address = Console.ReadLine();
+            Console.WriteLine("ENTER YOUR ADDRESS");
+            Console.WriteLine("________________________");
+            Console.WriteLine("Enter Your Road No : ");
+            string roadNo = Console.ReadLine();
+            Console.WriteLine("Enter Your House No: ");
+            string houseNo = Console.ReadLine();
+            Console.WriteLine("Enter your City : ");
+            string city = Console.ReadLine();
+            Console.WriteLine("Enter Your Country : ");
+            string country = Console.ReadLine();
+            Address address = new Address(roadNo, houseNo, city, country);
             Console.WriteLine("Enter your Starting Balance : ");
             double balance = Convert.ToDouble(Console.ReadLine());
 
