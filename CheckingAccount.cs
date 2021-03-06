@@ -8,7 +8,7 @@ namespace Developers_Bank
 {
     class CheckingAccount : Account
     {
-        public CheckingAccount(string name, string dateofBirth, string address, double balance) : base (name, dateofBirth, address,balance)
+        public CheckingAccount(int accountNo, string name, string dateofBirth, string address, double balance) : base (accountNo, name, dateofBirth, address,balance)
         {
 
         }
@@ -23,7 +23,7 @@ namespace Developers_Bank
             }
             else
             {
-                Console.WriteLine("YOU DON'T HAVE SUFFICIENT baLANCE!!");
+                Console.WriteLine("YOU DON'T HAVE SUFFICIENT BALANCE!!");
             }
         }
     }

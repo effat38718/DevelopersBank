@@ -8,7 +8,7 @@ namespace Developers_Bank
 {
     class SavingsAccount : Account
     {
-        public SavingsAccount(string name, string dateofBirth, string address, double balance) : base(name, dateofBirth, address, balance)
+        public SavingsAccount(int accountNo, string name, string dateofBirth, string address, double balance) : base(accountNo, name, dateofBirth, address, balance)
         {
 
         }

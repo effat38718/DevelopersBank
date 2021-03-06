@@ -8,22 +8,22 @@ namespace Developers_Bank
 {
     public abstract class Account
     {
+        public int accountNo;
         public string name;
         public string dateofBirth;
         public string address;
         public double balance;
 
-        public Account(string name, string dateofBirth, string address, double balance)
+        public Account(int accountNo, string name, string dateofBirth, string address, double balance)
         {
+            this.accountNo = accountNo;
             this.name = name;
             this.dateofBirth = dateofBirth;
             this.address = address;
             this.balance = balance;
         }
-        public void Deposit()
+        public void Deposit(double amount)
         {
-            Console.WriteLine("Enter the deposit amount : ");
-            double amount = Convert.ToDouble(Console.ReadLine());
             balance = balance + amount;
 
         }
