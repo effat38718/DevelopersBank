@@ -23,7 +23,7 @@ namespace Developers_Bank
             Console.WriteLine("Type 'savings' for Savings Account");
             Console.WriteLine("Type 'checking' Checking Account");
             Console.WriteLine("Type 'quit' to Exit from the application");
-            Console.WriteLine("Please Enter the Type Number : ");
+            Console.WriteLine("Please Enter your choice : ");
             string type = Console.ReadLine();
             Console.WriteLine("Enter your name : ");
             string name = Console.ReadLine();
@@ -38,8 +38,8 @@ namespace Developers_Bank
             {
                 Account account = new SavingsAccount(counter, name, dateofBirth, address, balance);
                 accounts[counter] = account;
-                Console.WriteLine("YOU HAVE SUCCESSFULLY OPENED A SAVINGS ACCOUNT!!");
                 Console.WriteLine("Account No : " + counter);
+                Console.WriteLine("YOU HAVE SUCCESSFULLY OPENED A SAVINGS ACCOUNT!!");
                 Console.WriteLine("----------------------------------------------------");
                 counter++;
             }
@@ -47,8 +47,8 @@ namespace Developers_Bank
             {
                 Account account = new CheckingAccount(counter, name, dateofBirth, address, balance);
                 accounts[counter] = account;
-                Console.WriteLine("YOU HAVE SUCCESSFULLY OPENED A CHECKING ACCOUNT!!");
                 Console.WriteLine("Account No : " + counter);
+                Console.WriteLine("YOU HAVE SUCCESSFULLY OPENED A CHECKING ACCOUNT!!");
                 Console.WriteLine("----------------------------------------------------");
                 counter++;
             }
@@ -77,21 +77,36 @@ namespace Developers_Bank
             if(transactionType == "deposit")
             {
                 Console.WriteLine("Enter Account number : ");
-                counter = Convert.ToInt32(Console.ReadLine());
+                int accountNo = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Enter the deposit amount : ");
                 double amount = Convert.ToDouble(Console.ReadLine());
-                this.accounts[counter].Deposit(amount);
+                accounts[accountNo].Deposit(amount);
             }
             else if (transactionType == "withdraw")
             {
-
+                Console.WriteLine("Enter Account number : ");
+                int accountNo = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter the withdraw amount : ");
+                double amount = Convert.ToDouble(Console.ReadLine());
+                accounts[accountNo].Withdraw(amount);
             }
             else if (transactionType == "transfer")
             {
+                Console.WriteLine("Enter your account number : ");
+                int senderAccountNo = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter the account number you want to transfer to : ");
+                int receiverAccNo = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter Transfer amount : ");
+                double amount = Convert.ToDouble(Console.ReadLine());
 
+                Account receiver = accounts[receiverAccNo];
+                accounts[senderAccountNo].Transfer(receiver, amount);
             }
             else if (transactionType == "show")
             {
+                Console.WriteLine("Enter Your Account number : ");
+                int accountNo = Convert.ToInt32(Console.ReadLine());
+                accounts[accountNo].ShowInformation();
 
             }
             else if (transactionType == "quit")

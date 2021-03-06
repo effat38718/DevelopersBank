@@ -9,9 +9,11 @@ namespace Developers_Bank
     class Program
     {
         public static string serviceNo;
+        public static Bank bank;
         static void Main(string[] args)
         {
             Program program = new Program();
+            Program.bank = new Bank();
             while(true)
             {
                 program.LaunchApp();
@@ -21,6 +23,10 @@ namespace Developers_Bank
                 }
                 program.LaunchService();
             }
+            /*Bank bank = new Bank();
+            bank.CreateAccount();
+            bank.Transaction();*/
+            
         }
 
         public void LaunchApp()
@@ -38,7 +44,6 @@ namespace Developers_Bank
 
         public void LaunchService()
         {
-            Bank bank = new Bank();
             switch(serviceNo)
             {
                 case "open":

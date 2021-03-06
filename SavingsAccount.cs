@@ -12,13 +12,14 @@ namespace Developers_Bank
         {
 
         }
-        public override void Withdraw()
+        public override void Withdraw(double amount)
         {
-            Console.WriteLine("Enter the Withdraw amount : ");
-            double amount = Convert.ToDouble(Console.ReadLine());
             if (amount < balance)
             {
                 balance -= amount;
+                Console.WriteLine("The amount " + amount + " has been withdrawn from your account");
+                Console.WriteLine("Your new balance is : " + balance);
+                transactionCount++;
             }
             else
             {

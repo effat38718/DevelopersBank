@@ -13,6 +13,7 @@ namespace Developers_Bank
         public string dateofBirth;
         public string address;
         public double balance;
+        internal int transactionCount = 0;
 
         public Account(int accountNo, string name, string dateofBirth, string address, double balance)
         {
@@ -25,19 +26,30 @@ namespace Developers_Bank
         public void Deposit(double amount)
         {
             balance = balance + amount;
-
+            Console.WriteLine("Your depositted amount is  " + amount);
+            Console.WriteLine("Your current balance is" + balance);
+            transactionCount++;
         }
 
-        public abstract void Withdraw();
+        public abstract void Withdraw(double amount);
 
-        public void Transfer()
+        public void Transfer(Account receiver, double amount)
         {
-            
+            balance -= amount;
+            transactionCount++;
+
+            receiver.balance += amount;
+            receiver.transactionCount++;
+
+            Console.WriteLine("Your transferred amount : " + amount);
+            Console.WriteLine("Your current balance is : " + balance);
+
         }
 
         public void ShowInformation()
         {
-
+            Console.WriteLine("Your Account Balance is : " + balance);
+            Console.WriteLine("The number of Transaction in your account : " + transactionCount);
         }
     }
 }
