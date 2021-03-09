@@ -15,7 +15,7 @@ namespace Developers_Bank
         public override void Withdraw(double amount)
         {
 
-            if(amount <= balance)
+            if(amount <= balance && amount > 0)
             {
                 balance -= amount;
                 Console.WriteLine("The amount " +amount+" has been withdrawn from your account");

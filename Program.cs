@@ -8,7 +8,7 @@ namespace Developers_Bank
 {
     class Program
     {
-        public static string serviceNo;
+        public static string serviceName;
         public static Bank bank;
         static void Main(string[] args)
         {
@@ -17,16 +17,12 @@ namespace Developers_Bank
             while(true)
             {
                 program.LaunchApp();
-                if(serviceNo == "quit" )
+                if(serviceName == "quit" )
                 {
                     return;
                 }
                 program.LaunchService();
-            }
-            /*Bank bank = new Bank();
-            bank.CreateAccount();
-            bank.Transaction();*/
-            
+            }           
         }
 
         public void LaunchApp()
@@ -39,12 +35,12 @@ namespace Developers_Bank
             Console.WriteLine("TYPE 'quit' EXIT FROM THE APPLICATION");
             Console.WriteLine("-----------------------------");
 
-            serviceNo = Console.ReadLine();
+            serviceName = Console.ReadLine();
         }
 
         public void LaunchService()
         {
-            switch(serviceNo)
+            switch(serviceName)
             {
                 case "open":
                     bank.CreateAccount();

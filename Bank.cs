@@ -8,7 +8,7 @@ namespace Developers_Bank
 {
     public class Bank
     {
-        public static int counter = 0;
+        public int counter = 0;
         public Account[] accounts;
 
         public Bank()
